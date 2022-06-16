@@ -12,16 +12,11 @@ def collect_data():
     # taking opening price as the column of interest
     df = eth_df[["Date", "Open"]]
     new_names = {
-        "Open": "Value",
+        "Open": "Price",
     }
 
     df.rename(columns=new_names, inplace=True)
     df['Date'] = pd.to_datetime(df['Date'])
 
+    #df = pd.read_csv("to_be_deleted.csv")
     return df
-
-def plot_price():
-    # Plotting Price values
-    df = collect_data()
-    fig, ax = plt.subplots(figsize=(12, 8), dpi=100)
-    ax.plot(df['Date'], df['Value'])
