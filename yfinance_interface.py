@@ -18,5 +18,4 @@ def collect_data():
     df.rename(columns=new_names, inplace=True)
     df['Date'] = pd.to_datetime(df['Date'])
 
-    #df = pd.read_csv("to_be_deleted.csv")
     return df

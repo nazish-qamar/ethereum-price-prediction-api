@@ -1,2 +1,7 @@
 yfinance
 streamlit
+xgboost
+numpy
+pandas
+matplotlib
+statsmodels

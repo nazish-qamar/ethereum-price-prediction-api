@@ -3,9 +3,8 @@ import numpy as np
 import streamlit as st
 
 import matplotlib.pyplot as plt
-import datetime as DT
+import datetime as dt
 import warnings
-import datetime
 
 warnings.filterwarnings('ignore')
 
@@ -29,10 +28,11 @@ def arima_prediction(df):
     fc_upper = fc['mean_ci_upper']
 
 
-    today = DT.date.today()
-    NextDays = [today]
+    day_iter = dt.date.today()
+    NextDays = [day_iter]
     for i in range(1,7):
-        NextDays.append(today + datetime.timedelta(days=1))
+        day_iter = day_iter + dt.timedelta(days=1)
+        NextDays.append(day_iter)
 
     future_7_days = NextDays
 
@@ -46,7 +46,7 @@ def arima_prediction(df):
     ax.fill_between(future_7_days, np.exp(fc_lower), np.exp(fc_upper), color='b'
                      , alpha=.1, label='95 % Confidence ')
 
-    st.write('\nEthereum 7 Day Forecast')
+    st.write('\nEthereum 7 Day Forecast by ARIMA Model')
 
     # Set legend
     fig.legend(loc='upper left', fontsize=12)

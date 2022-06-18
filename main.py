@@ -1,5 +1,7 @@
-from arima_utility import *
 from yfinance_interface import *
+from arima_utility import *
+from xgboost_utility import *
+
 import warnings
 warnings.filterwarnings('ignore')
 #streamlit run D:/git_clone/ethereum-price-prediction-api/main.py
@@ -18,7 +20,7 @@ if __name__ == '__main__':
     st.pyplot(fig)
 
     if "ARIMA" == choice:
-        arima_prediction(price_df)
+        arima_prediction(price_df.copy())
 
     else:
-        pass
+        xgboost_prediction(price_df.copy())
