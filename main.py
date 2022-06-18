@@ -4,7 +4,7 @@ from xgboost_utility import *
 
 import warnings
 warnings.filterwarnings('ignore')
-#streamlit run D:/git_clone/ethereum-price-prediction-api/main.py
+
 
 if __name__ == '__main__':
     st.title("Ethereum Price Forecast")
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     choice = st.sidebar.selectbox("Select Model", ("ARIMA", "XGBoost"))
     price_df = collect_data()
 
-    # Plotting Price values
+    # Plotting Ethereum Prices
     fig, ax = plt.subplots(figsize=(12, 8), dpi=100)
     ax.plot(price_df['Date'], price_df['Price'])
 

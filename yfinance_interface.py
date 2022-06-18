@@ -4,13 +4,13 @@ from datetime import datetime
 
 
 def collect_data():
-    today = datetime.today().strftime('%Y-%m-%d')
+    today = datetime.today().strftime('%Y-%m-%d') #Fetching today's date
     start_date = '2016-01-01'
-    eth_df = yf.download('ETH-USD', start_date, today)
-    eth_df.reset_index(inplace=True)
+    ethereum_data = yf.download('ETH-USD', start_date, today)
+    ethereum_data.reset_index(inplace=True)
 
     # taking opening price as the column of interest
-    df = eth_df[["Date", "Open"]]
+    df = ethereum_data[["Date", "Open"]]
     new_names = {
         "Open": "Price",
     }
