@@ -1,5 +1,9 @@
 # ethereum-price-prediction-api
-A web API for an interactive dashboard for forecasting Ethereum price for the next seven days
+A streamlit based web API for an interactive dashboard for forecasting Ethereum price for the next seven days
+
+### Features:
+#### 1. Displaying the current ethereum price trend over the time 
+#### 2. Interactive model selection for prediction, i.e., ARIMA model or XGBoost model
 
 ## Files Information
 ### 1.main.py
