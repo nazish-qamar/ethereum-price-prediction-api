@@ -4,6 +4,7 @@ from xgboost_utility import *
 
 import warnings
 warnings.filterwarnings('ignore')
+#streamlit run D:/git_clone/ethereum-price-prediction-api/main.py
 
 
 if __name__ == '__main__':
