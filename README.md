@@ -1,5 +1,5 @@
 # ethereum-price-prediction-api
-A streamlit based web API for displaying current ethereum price and forecasting the price for the next seven days
+An interactive streamlit based web API for displaying current ethereum price and forecasting the price for the next seven days
 
 ### Features:
 #### 1. Displaying the current ethereum price trend over the time 
