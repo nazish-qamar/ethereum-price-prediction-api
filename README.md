@@ -1,6 +1,7 @@
 # ethereum-price-prediction-api
 An interactive streamlit based web API for displaying the current ethereum price and forecasting the price for the next seven days
-
+## API URL:
+#### https://nazish-qamar-ethereum-price-prediction-api-main-mrp001.streamlit.app/
 ### Features:
 #### 1. Displaying the current ethereum price trend over the time 
 #### 2. Interactive model selection for prediction, i.e., ARIMA model or XGBoost model
